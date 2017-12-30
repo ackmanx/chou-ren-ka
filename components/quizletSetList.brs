@@ -9,7 +9,9 @@ sub init()
         setItem.title = set.title
     end for
 
-    m.top.findNode("setList-LabelList").content = contentNodeContainer
+    setList = m.top.findNode("setList-LabelList")
+    setList.content = contentNodeContainer
+
     m.top.setFocus(true)
 end sub
 

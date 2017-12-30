@@ -2,6 +2,3 @@ out/
 .idea/
 *.iml
 .junk/
-
-#Temporary during development
-fonts/

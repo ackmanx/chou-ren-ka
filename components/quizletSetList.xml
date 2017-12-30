@@ -2,10 +2,20 @@
 
 <component name="QuizletSetList"
            extends="Scene"
-           initialFocus = "setList">
+           initialFocus="setList-LabelList">
 
     <children>
-        <LabelList id="setList-LabelList" />
+        <LabelList id="setList-LabelList"
+                   itemSize="[ 960, 60 ]"
+                   textHorizAlign="right">
+
+            <Font role="font"
+                  uri="pkg:/fonts/AuraGloriousDaySC.ttf"
+                  size="44" />
+            <Font role="focusedFont"
+                  uri="pkg:/fonts/AuraGloriousDaySC.ttf"
+                  size="44" />
+        </LabelList>
     </children>
 
     <script uri="pkg:/components/quizletSetList.brs" />
