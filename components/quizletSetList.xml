@@ -7,7 +7,11 @@
     <children>
         <LabelList id="setList-LabelList"
                    itemSize="[ 960, 60 ]"
-                   textHorizAlign="right">
+                   itemSpacing="[ 0, 20 ]"
+                   numRows="6"
+                   focusRow="3"
+                   wrapDividerBitmapUri=""
+                   textHorizAlign="center">
 
             <Font role="font"
                   uri="pkg:/fonts/AuraGloriousDaySC.ttf"
