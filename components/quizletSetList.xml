@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <component name="QuizletSetList"
-           extends="Scene"
+           extends="Group"
            initialFocus="setList-LabelList">
 
     <children>

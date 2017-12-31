@@ -7,7 +7,7 @@ sub Main()
     m.port = CreateObject("roMessagePort")
     screen.setMessagePort(m.port)
 
-    screen.createScene("QuizletSetList")
+    screen.createScene("ChouRenKa")
     screen.show()
 
     'Some type of event handling is defined here
