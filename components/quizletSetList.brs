@@ -34,6 +34,9 @@ sub centerSetList()
 end sub
 
 sub openSetHandler()
-    m.global.setId = m.setList.content.getChild(m.setList.itemSelected).id
+    setId = m.setList.content.getChild(m.setList.itemSelected).id
+    'This is the only way to put an item on the global object. You can access it later via m.global.setId
+    m.global.addFields({setId: setId})
+    
     m.top.createChild("QuizletSet")
 end sub
