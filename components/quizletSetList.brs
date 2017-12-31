@@ -12,7 +12,7 @@ sub populateSetList()
     jsonString = ReadAsciiFile("pkg:/mockJson/user-ackmanx.json")
     json = ParseJSON(jsonString)
 
-    contentNodeContainer = m.top.createChild("ContentNode")
+    contentNodeContainer = createObject("RoSGNode", "ContentNode")
 
     for each set in json.sets
         setItem = contentNodeContainer.createChild("ContentNode")
