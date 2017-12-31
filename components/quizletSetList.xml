@@ -5,11 +5,15 @@
            initialFocus="setList-LabelList">
 
     <children>
+        <Rectangle id="background"
+                   width="1920"
+                   height="1080"
+                   translation="[ 0.0, 0.0 ]"
+                   color="0x396B77FF" />
+
         <LabelList id="setList-LabelList"
                    itemSpacing="[ 0, 20 ]"
-                   numRows="6"
-                   focusRow="3"
-                   wrapDividerBitmapUri=""
+                   vertFocusAnimationStyle="floatingFocus"
                    textHorizAlign="center">
 
             <Font role="font"
