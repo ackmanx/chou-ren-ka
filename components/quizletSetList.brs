@@ -5,18 +5,21 @@ sub init()
     populateSetList()
     centerSetList()
 
+    m.setList.observeField("itemSelected", "openSetHandler")
+
     m.top.setFocus(true)
 end sub
 
 sub populateSetList()
     jsonString = ReadAsciiFile("pkg:/mockJson/user-ackmanx.json")
-    json = ParseJSON(jsonString)
+    m.json = ParseJSON(jsonString)
 
     contentNodeContainer = createObject("RoSGNode", "ContentNode")
 
-    for each set in json.sets
+    for each set in m.json.sets
         setItem = contentNodeContainer.createChild("ContentNode")
         setItem.title = set.title
+        setItem.id = set.id.toStr()
     end for
 
     m.setList.content = contentNodeContainer
@@ -30,13 +33,7 @@ sub centerSetList()
     m.setList.translation = [ x, y ]
 end sub
 
-function onKeyEvent(key as String, press as Boolean) as Boolean
-    if press then
-        if key = "OK" THEN
-            print "OK pressed"
-            return true
-        end if
-    end if
-
-    return false
-end function
+sub openSetHandler()
+    'todo: open new screen now that I have the setId. For this mock data example, ignore the id and just show cards with static mock data
+    setId = m.setList.content.getChild(m.setList.itemSelected).id
+end sub
