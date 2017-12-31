@@ -35,8 +35,12 @@ end sub
 
 sub openSetHandler()
     setId = m.setList.content.getChild(m.setList.itemSelected).id
+
     'This is the only way to put an item on the global object. You can access it later via m.global.setId
     m.global.addFields({setId: setId})
-    
-    m.top.createChild("QuizletSet")
+
+    quizletSet = CreateObject("roSGNode", "QuizletSet")
+    quizletSet.setFocus(true)
+
+    m.top.appendChild(quizletSet)
 end sub
