@@ -7,7 +7,7 @@ sub Main()
     m.port = CreateObject("roMessagePort")
     screen.setMessagePort(m.port)
 
-    screen.CreateScene("QuizletSetList")
+    screen.createScene("QuizletSetList")
     screen.show()
 
     'Some type of event handling is defined here
