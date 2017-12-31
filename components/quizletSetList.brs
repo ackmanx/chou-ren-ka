@@ -34,6 +34,6 @@ sub centerSetList()
 end sub
 
 sub openSetHandler()
-    'todo: open new screen now that I have the setId. For this mock data example, ignore the id and just show cards with static mock data
-    setId = m.setList.content.getChild(m.setList.itemSelected).id
+    m.global.setId = m.setList.content.getChild(m.setList.itemSelected).id
+    m.top.createChild("QuizletSet")
 end sub

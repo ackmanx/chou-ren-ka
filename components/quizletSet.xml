@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="QuizletSet"
+           extends="Group"
+           initialFocus="exampleLabelList">
+
+    <children>
+        <Rectangle id="background"
+                   width="1920"
+                   height="1080"
+                   translation="[ 0.0, 0.0 ]"
+                   color="0x396B77FF" />
+
+        <LabelList id="exampleLabelList">
+            <ContentNode role="content">
+                <ContentNode title="1 My Junk Title Number Freaking Holy Wow Three" />
+                <ContentNode title="Z-Order/Parent-Child" />
+                <ContentNode title="Animations" />
+                <ContentNode title="Events and Observers" />
+                <ContentNode title="2 My Junk Title Number Freaking Holy Wow Three" />
+                <ContentNode title="Z-Order/Parent-Child" />
+                <ContentNode title="Animations" />
+                <ContentNode title="Events and Observers" />
+                <ContentNode title="3 My Junk Title Number Freaking Holy Wow Three" />
+                <ContentNode title="Z-Order/Parent-Child" />
+                <ContentNode title="Animations" />
+                <ContentNode title="Events and Observers" />
+                <ContentNode title="4 My Junk Title Number Freaking Holy Wow Three" />
+                <ContentNode title="Z-Order/Parent-Child" />
+                <ContentNode title="Animations" />
+                <ContentNode title="Events and Observers" />
+                <ContentNode title="5 My Junk Title Number Freaking Holy Wow Three" />
+                <ContentNode title="Z-Order/Parent-Child" />
+                <ContentNode title="Animations" />
+                <ContentNode title="Events and Observers" />
+            </ContentNode>
+        </LabelList>
+    </children>
+
+    <script uri="pkg:/components/quizletSet.brs" />
+</component>
