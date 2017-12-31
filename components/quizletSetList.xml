@@ -6,7 +6,6 @@
 
     <children>
         <LabelList id="setList-LabelList"
-                   itemSize="[ 960, 60 ]"
                    itemSpacing="[ 0, 20 ]"
                    numRows="6"
                    focusRow="3"
