@@ -4,12 +4,6 @@
            extends="Group">
 
     <children>
-        <Rectangle id="background"
-                   width="1920"
-                   height="1080"
-                   translation="[ 0.0, 0.0 ]"
-                   color="0x396B77FF">
-
             <Label id="cardText"
                    text="Hello World"
                    width="1920"
@@ -20,7 +14,6 @@
 
                 <Font role="font" uri="pkg:/fonts/AuraGloriousDaySC.ttf" size="168" />
             </Label>
-        </Rectangle>
     </children>
 
     <script uri="pkg:/components/quizletSet.brs" />
