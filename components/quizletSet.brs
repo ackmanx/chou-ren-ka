@@ -13,7 +13,7 @@ end sub
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
     if press then
-        if key = "OK" THEN
+        if key = "OK" then
             flipCard()
             return true
         else if key = "right" then
