@@ -2,10 +2,10 @@
 
 <component name="QuizletSetList"
            extends="Group"
-           initialFocus="setList-LabelList">
+           initialFocus="LabelListID">
 
     <children>
-        <LabelList id="setList-LabelList"
+        <LabelList id="LabelListID"
                    itemSpacing="[ 0, 20 ]"
                    vertFocusAnimationStyle="floatingFocus"
                    textHorizAlign="center">
