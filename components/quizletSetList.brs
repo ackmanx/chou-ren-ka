@@ -3,8 +3,6 @@ sub init()
     m.setList = m.top.findNode("LabelListID")
 
     startQuizletReaderTask()
-    populateSetList()
-    centerSetList()
 
     m.top.setFocus(true)
 end sub
@@ -19,6 +17,8 @@ sub populateSetList()
     'LabelList has a content field declared by default, so we can access it
     'Set our content to point to the newly-populated content from our QuizletReader
     m.setList.content = m.quizletUserReader.content
+
+    centerSetList()
 end sub
 
 sub centerSetList()
