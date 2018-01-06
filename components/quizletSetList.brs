@@ -2,27 +2,23 @@ sub init()
     'Create component scope references
     m.setList = m.top.findNode("LabelListID")
 
+    startQuizletReaderTask()
     populateSetList()
     centerSetList()
 
     m.top.setFocus(true)
 end sub
 
+sub startQuizletReaderTask()
+    m.quizletUserReader = createObject("roSGNode", "QuizletUserReader")
+    m.quizletUserReader.observeField("content", "populateSetList")
+    m.quizletUserReader.control = "RUN"
+end sub
+
 sub populateSetList()
-    jsonString = ReadAsciiFile("pkg:/mockJson/user-ackmanx.json")
-    m.json = ParseJSON(jsonString)
-
-    'LabelList must have a ContentNode container as child, which will house the items on the list
-    contentNodeContainer = CreateObject("roSGNode", "ContentNode")
-
-    for each set in m.json.sets
-        setItem = contentNodeContainer.createChild("ContentNode")
-        setItem.title = set.title
-        setItem.id = set.id.toStr()
-    end for
-
     'LabelList has a content field declared by default, so we can access it
-    m.setList.content = contentNodeContainer
+    'Set our content to point to the newly-populated content from our QuizletReader
+    m.setList.content = m.quizletUserReader.content
 end sub
 
 sub centerSetList()
