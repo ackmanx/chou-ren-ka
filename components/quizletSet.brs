@@ -1,14 +1,22 @@
 sub init()
-    jsonString = ReadAsciiFile("pkg:/mockJson/set-directional-stuff.json")
-    m.json = ParseJSON(jsonString)
+    startQuizletReaderTask()
+    m.top.setFocus(true)
+end sub
+
+sub startQuizletReaderTask()
+    m.quizletUserReader = createObject("roSGNode", "QuizletSetReader")
+    m.quizletUserReader.observeField("content", "populateSet")
+    m.quizletUserReader.control = "RUN"
+end sub
+
+sub populateSet()
+    m.json = m.quizletUserReader.content
 
     m.currentIndex = 0
     m.currentSide = "term"
 
     m.cardText = m.top.findNode("cardText")
     m.cardText.text = m.json.terms[0].term
-
-    m.top.setFocus(true)
 end sub
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
