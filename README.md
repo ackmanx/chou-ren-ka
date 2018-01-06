@@ -1,6 +1,9 @@
 ### Intro
 I want to look at Quizlet flashcards using my TV. I have a Roku. Problem solved.
 
+### To Run
+* Being this is not on the Roku Store, you have to side-load it as a dev app. See "To Develop"'s Roku section
+
 ### To Develop
 * Atom
   * For main development because it has deployment plugins
@@ -18,6 +21,7 @@ I want to look at Quizlet flashcards using my TV. I have a Roku. Problem solved.
 * Roku
   * Enable Developer Mode
   * Note the IP address and supply to roku-deploy preferences in Atom
+  * From Atom menu bar: Packages -> roku-deploy -> Deploy
 
 ### To debug
 You have to open a terminal and telnet to Roku. The docs have instructions.
