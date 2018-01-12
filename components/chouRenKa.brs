@@ -35,10 +35,13 @@ end sub
 
 sub QuizletSetList_show()
     quizletSetList = CreateObject("roSGNode", "QuizletSetList")
+
+    m.setList = quizletSetList.findNode("LabelListID")
+    m.setList.observeField("itemSelected", "QuizletSetList_openSet")
+
     m.top.replaceChild(quizletSetList, 0)
     m.currentScreen = "QuizletSetList"
     quizletSetList.setFocus(true)
-    'todo: lost OK binding that labellist gives automatically
 end sub
 
 
