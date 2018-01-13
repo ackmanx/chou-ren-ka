@@ -6,5 +6,5 @@
         <field id="content" type="roAssociativeArray" />
     </interface>
 
-    <script uri="pkg:/components/network/quizletSetReader.brs" />
+    <script uri="pkg:/components/network/quizlet-set-reader.brs" />
 </component>

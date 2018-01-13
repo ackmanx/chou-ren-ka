@@ -6,5 +6,5 @@
         <field id="content" type="node" />
     </interface>
 
-    <script uri="pkg:/components/network/quizletUserReader.brs" />
+    <script uri="pkg:/components/network/quizlet-user-reader.brs" />
 </component>
