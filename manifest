@@ -17,6 +17,6 @@ splash_screen_fhd=pkg:/images/splash-screen.jpg
 splash_screen_hd=pkg:/images/splash-screen.jpg
 splash_screen_sd=pkg:/images/splash-screen.jpg
 
-splash_min_time=1000
+splash_min_time=2000
 
 ui_resolutions=fhd

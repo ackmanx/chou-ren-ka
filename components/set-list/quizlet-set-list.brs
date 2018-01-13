@@ -17,6 +17,11 @@ sub populateSetList()
     'Set our content to point to the newly-populated content from our QuizletReader
     m.labelList.content = m.quizletUserReader.content
 
+    'Set which list item to have focus when the component loads
+    if m.global.hasField("setListItemSelected")
+        m.labelList.jumpToItem = m.global.setListItemSelected
+    end if
+
     centerSetList()
 end sub
 

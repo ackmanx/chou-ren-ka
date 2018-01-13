@@ -31,8 +31,12 @@ sub showSetList()
 end sub
 
 sub openSet()
+    'Store the selected item's index so when the user comes back to the set list screen from the set screen it's where they left off
+    itemSelectedIndex = m.labelList.itemSelected
+    setGlobal("setListItemSelected", itemSelectedIndex)
+    
     'Our LabelList has a content child, which contains other content nodes for the list items
-    setId = m.labelList.content.getChild(m.labelList.itemSelected).id
+    setId = m.labelList.content.getChild(itemSelectedIndex).id
 
     'I don't know how to pass an argument to CreateObject, so throw the setId on the global object
     setGlobal("setId", setId)
