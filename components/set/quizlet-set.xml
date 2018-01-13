@@ -17,5 +17,5 @@
         </Label>
     </children>
 
-    <script uri="pkg:/components/quizletSet.brs" />
+    <script uri="pkg:/components/set/quizlet-set.brs" />
 </component>

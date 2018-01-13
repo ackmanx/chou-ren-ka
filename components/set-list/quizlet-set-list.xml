@@ -16,5 +16,5 @@
         </LabelList>
     </children>
 
-    <script uri="pkg:/components/quizletSetList.brs" />
+    <script uri="pkg:/components/set-list/quizlet-set-list.brs" />
 </component>
