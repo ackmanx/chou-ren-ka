@@ -1,3 +1,6 @@
+'
+' This reader will make network requests to Quizlet and return the parsed JSON
+'
 sub init()
     m.top.functionName = "taskRunner"
 end sub
