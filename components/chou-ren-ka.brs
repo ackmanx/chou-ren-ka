@@ -51,17 +51,6 @@ end sub
 ' Utility and Whatnot functions
 '--------------------------------------------------------------------------------------------------------------------------------
 
-'m.global sucks and has to be set up explicitly with new fields to work
-sub setGlobal(key as String, value as Object)
-    if m.global.hasField(key)
-        m.global[key] = value
-    else
-        fields = {}
-        fields[key] = value
-        m.global.addFields(fields)
-    end if
-end sub
-
 'Roku lets you listen to remote events in a component if you implement this function
 function onKeyEvent(key as String, press as Boolean) as Boolean
     if press and key = "back" then

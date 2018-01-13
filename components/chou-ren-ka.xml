@@ -2,4 +2,5 @@
 
 <component name="ChouRenKa" extends="Scene">
     <script type="text/brightscript" uri="pkg:/components/chou-ren-ka.brs" />
+    <script uri="pkg:/components/util.brs" />
 </component>

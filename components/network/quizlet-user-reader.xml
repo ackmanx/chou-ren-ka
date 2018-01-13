@@ -7,4 +7,5 @@
     </interface>
 
     <script uri="pkg:/components/network/quizlet-user-reader.brs" />
+    <script uri="pkg:/components/util.brs" />
 </component>
