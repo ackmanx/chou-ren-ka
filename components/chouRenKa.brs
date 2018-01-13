@@ -3,45 +3,47 @@ sub init()
     m.top.backgroundColor="0x396B77FF"
 
     'Start the app with showing the set list screen
-    QuizletSetList = m.top.createChild("QuizletSetList")
-    m.currentScreen = "QuizletSetList"
-
-    'Register an event listener on my LabelList to detect when user presses OK
-    'LabelList will automatically handle OK remote presses and populate index of the list in this field
-    m.setList = QuizletSetList.findNode("LabelListID")
-    m.setList.observeField("itemSelected", "QuizletSetList_openSet")
+    showSetList()
 end sub
 
 
 '--------------------------------------------------------------------------------------------------------------------------------
-' QuizletSetList-specific functions
+' Screen management functions
 '--------------------------------------------------------------------------------------------------------------------------------
 
-sub QuizletSetList_openSet()
-    setId = m.setList.content.getChild(m.setList.itemSelected).id
+sub showSetList()
+    quizletSetList = CreateObject("roSGNode", "QuizletSetList")
+
+    'Our listener below has to be attached to the LabelList, not the entire component
+    m.labelList = quizletSetList.findNode("LabelListID")
+
+    'Register an event listener on my LabelList to detect when user presses OK
+    'LabelList will automatically handle OK remote presses and populate index of the list in this field
+    m.labelList.observeField("itemSelected", "openSet")
+
+    'We should never have more than one child on our master component, so this is okay
+    'The reason I don't do replaceChild here is because on application load our master component has no child to replace yet
+    m.top.removeChildIndex(0)
+    m.top.insertChild(quizletSetList, 0)
+
+    'Remote focus cannot be set until after the component is mounted
+    quizletSetList.setFocus(true)
+end sub
+
+sub openSet()
+    'Our LabelList has a content child, which contains other content nodes for the list items
+    setId = m.labelList.content.getChild(m.labelList.itemSelected).id
 
     'I don't know how to pass an argument to CreateObject, so throw the setId on the global object
     setGlobal("setId", setId)
 
     'Create new screen to show our set and remove set list screen
     quizletSet = CreateObject("roSGNode", "QuizletSet")
+
     m.top.replaceChild(quizletSet, 0)
-    m.currentScreen = "QuizletSet"
 
     'Remote focus cannot be set until after the component is mounted
-    'Note even though QuizletSet sets focus on init, Roku don't care and ignores it
     quizletSet.setFocus(true)
-end sub
-
-sub QuizletSetList_show()
-    quizletSetList = CreateObject("roSGNode", "QuizletSetList")
-
-    m.setList = quizletSetList.findNode("LabelListID")
-    m.setList.observeField("itemSelected", "QuizletSetList_openSet")
-
-    m.top.replaceChild(quizletSetList, 0)
-    m.currentScreen = "QuizletSetList"
-    quizletSetList.setFocus(true)
 end sub
 
 
@@ -65,12 +67,12 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
     if press and key = "back" then
         'If user is at the set list, then back exits the application
         'This is because we return false to signify we aren't handling this event and Roku's native handler will be invoked
-        if m.currentScreen = "QuizletSetList" then
+        if m.top.getChild(0).name = "QuizletSetList" then
             return false
         end if
 
-        'User must have pressed back on the set screen, so show the set list screen now
-        QuizletSetList_show()
+        'If here, user must have pressed back on the set screen, so show the set list screen now
+        showSetList()
         return true
     end if
 

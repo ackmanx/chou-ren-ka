@@ -4,6 +4,10 @@
            extends="Group"
            initialFocus="LabelListID">
 
+    <interface>
+        <field id="name" type="string" value="QuizletSetList"/>
+    </interface>
+
     <children>
         <LabelList id="LabelListID"
                    itemSpacing="[ 0, 20 ]"

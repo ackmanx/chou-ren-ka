@@ -6,7 +6,7 @@ I want to look at Quizlet flashcards using my TV. I have a Roku. Problem solved.
 
 ### To Develop
 * Atom
-  * For main development because it has deployment plugins
+  * Option 1 for main development if you use plugins below
   * atom-beautify to autoformat XML
   * autosave-onchange because I'm used to how IntelliJ saves files
   * git-plus to enable gutter icons for git changes
@@ -14,9 +14,14 @@ I want to look at Quizlet flashcards using my TV. I have a Roku. Problem solved.
   * roku-deploy will auto-zip current project and send to Roku with a single hotkey
 
 * IntelliJ
+  * Option 2 for main development if you create new File Type below
   * For better diffing when looking at what I'm going to commit
   * To occassionally fix atom-beautify poor formatting choices
   * I created a new .brs File Type in settings to enable basic syntax highlighting based on keywords
+
+* Atom and IntelliJ
+  * I like use to IntelliJ for everything except deploys because I don't know how
+  * So I keep Atom open just to go to, hit deploy shortcut, then go back to IntelliJ
 
 * Roku
   * Enable Developer Mode

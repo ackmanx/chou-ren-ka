@@ -3,8 +3,12 @@
 <component name="QuizletSet"
            extends="Group">
 
+    <interface>
+        <field id="name" type="string" value="QuizletSet"/>
+    </interface>
+
     <children>
-            <Label id="cardText"
+            <Label id="card"
                    width="1920"
                    height="1080"
                    horizAlign="center"
