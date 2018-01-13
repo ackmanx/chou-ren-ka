@@ -18,6 +18,12 @@ sub populateSet()
 
     m.card = m.top.findNode("card")
     m.card.text = m.json.terms[0].term
+
+    m.currentSideLabel = m.top.findNode("currentSide")
+    m.currentSideLabel.text = m.currentSide
+
+    m.currentIndexLabel = m.top.findNode("currentIndex")
+    m.currentIndexLabel.text = getCurrentIndexLabel()
 end sub
 
 
@@ -33,6 +39,7 @@ sub previousTerm()
     end if
 
     m.card.text = m.json.terms[m.currentIndex].term
+    m.currentIndexLabel.text = getCurrentIndexLabel()
     m.currentSide = "term"
 end sub
 
@@ -44,6 +51,7 @@ sub nextTerm()
     end if
 
     m.card.text = m.json.terms[m.currentIndex].term
+    m.currentIndexLabel.text = getCurrentIndexLabel()
     m.currentSide = "term"
 end sub
 
@@ -55,12 +63,18 @@ sub flipCard()
         m.card.text = m.json.terms[m.currentIndex].term
         m.currentSide = "term"
     end if
+
+    m.currentSideLabel.text = m.currentSide
 end sub
 
 
 '--------------------------------------------------------------------------------------------------------------------------------
 ' Utility and Whatnot functions
 '--------------------------------------------------------------------------------------------------------------------------------
+
+function getCurrentIndexLabel() as String
+    return (m.currentIndex + 1).toStr() + " / " + m.json.terms.count().toStr()
+end function
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
     if press then
