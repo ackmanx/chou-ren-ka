@@ -1,15 +1,10 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
 
-<component name="QuizletSetReader"
-           extends="Task">
-
+<component name="QuizletSetReader" extends="Task">
     <interface>
-        <field id="contenturi"
-               type="uri" />
-        <field id="content"
-               type="roAssociativeArray" />
+        <field id="contenturi" type="uri" />
+        <field id="content" type="roAssociativeArray" />
     </interface>
 
     <script uri="pkg:/components/network/quizletSetReader.brs" />
-
 </component>

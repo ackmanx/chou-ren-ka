@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<component name="QuizletSet"
-           extends="Group">
-
+<component name="QuizletSet" extends="Group">
     <interface>
-        <field id="name" type="string" value="QuizletSet"/>
+        <field id="name" type="string" value="QuizletSet" />
     </interface>
 
     <children>
-            <Label id="card"
-                   width="1920"
-                   height="1080"
-                   horizAlign="center"
-                   vertAlign="center"
-                   color="0xFFFFFFFF">
+        <Label id="card"
+               width="1920"
+               height="1080"
+               horizAlign="center"
+               vertAlign="center"
+               color="0xFFFFFFFF">
 
-                <Font role="font" uri="pkg:/fonts/AuraGloriousDaySC.ttf" size="168" />
-            </Label>
+            <Font role="font" uri="pkg:/fonts/AuraGloriousDaySC.ttf" size="168" />
+        </Label>
     </children>
 
     <script uri="pkg:/components/quizletSet.brs" />
