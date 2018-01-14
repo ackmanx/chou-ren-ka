@@ -37,3 +37,5 @@ https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
 ### Misc
 
 Font files are from Google's Noto font: https://www.google.com/get/noto/#sans-hans
+
+This was designed specifically for a 1920-1080 experience. Smaller resolutions may look bad due to dynamic font sizing.

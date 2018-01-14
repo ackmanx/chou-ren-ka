@@ -11,6 +11,7 @@
                height="1080"
                horizAlign="center"
                vertAlign="center"
+               wrap="true"
                color="0xFFFFFFFF">
 
             <Font role="font" uri="pkg:/fonts/NotoSansCJKsc-Light.otf" size="170" />

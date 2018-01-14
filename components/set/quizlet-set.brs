@@ -68,6 +68,7 @@ sub flipCard()
         m.currentSide = "term"
     end if
 
+    resizeCardFont()
     m.currentSideLabel.text = m.currentSide
 end sub
 
@@ -75,6 +76,17 @@ end sub
 '--------------------------------------------------------------------------------------------------------------------------------
 ' Utility and Whatnot functions
 '--------------------------------------------------------------------------------------------------------------------------------
+
+sub resizeCardFont()
+    newSize = 170
+    length = m.card.text.len()
+
+    if length > 25 then
+        newSize = 120
+    end if
+
+    m.card.font.size = newSize
+end sub
 
 function getCurrentIndexLabel() as String
     return (m.currentIndex + 1).toStr() + " / " + m.json.terms.count().toStr()
