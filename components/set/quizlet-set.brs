@@ -21,9 +21,13 @@ sub populateSet()
 
     m.currentSideLabel = m.top.findNode("currentSide")
     m.currentSideLabel.text = m.currentSide
+    'In order to set font size without specifying a font file, you must set a "font" attribute in XML with a system font, and then set font size in BrightScript
+    m.currentSideLabel.font.size = 48
 
     m.currentIndexLabel = m.top.findNode("currentIndex")
     m.currentIndexLabel.text = getCurrentIndexLabel()
+    'In order to set font size without specifying a font file, you must set a "font" attribute in XML with a system font, and then set font size in BrightScript
+    m.currentIndexLabel.font.size = 48
 end sub
 
 

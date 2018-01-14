@@ -30,7 +30,7 @@ sub centerSetList()
     boundingRect = m.labelList.boundingRect()
     x = (1920 - boundingRect.width) / 2
     y = (1080 - boundingRect.height) / 2
-    m.labelList.translation = [ x, y ]
+    m.labelList.translation = [x, y]
 end sub
 
 'There's no onKeyEvent override here because LabelList has built-in handlers for key events
