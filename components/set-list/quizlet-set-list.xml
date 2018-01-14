@@ -11,8 +11,8 @@
                    vertFocusAnimationStyle="floatingFocus"
                    textHorizAlign="center">
 
-            <Font role="font" uri="pkg:/fonts/AuraGloriousDaySC.ttf" size="44" />
-            <Font role="focusedFont" uri="pkg:/fonts/AuraGloriousDaySC.ttf" size="44" />
+            <Font role="font" uri="pkg:/fonts/NotoSansCJKsc-Regular.otf" size="44" />
+            <Font role="focusedFont" uri="pkg:/fonts/NotoSansCJKsc-Regular.otf" size="44" />
         </LabelList>
     </children>
 

@@ -33,3 +33,7 @@ You have to open a terminal and telnet to Roku. The docs have instructions.
 https://sdkdocs.roku.com/display/sdkdoc/Debugging+Your+Application
 
 `print` statements in BrightScript will output to the telnet session
+
+### Misc
+
+Font files are from Google's Noto font: https://www.google.com/get/noto/#sans-hans
