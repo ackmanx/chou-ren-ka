@@ -10,20 +10,23 @@
                width="1920"
                height="1080"
                horizAlign="center"
-               vertAlign="center">
+               vertAlign="center"
+               color="0xFFFFFFFF">
 
             <Font role="font" uri="pkg:/fonts/AuraGloriousDaySC.ttf" size="168" />
         </Label>
 
         <Label id="currentSide"
                translation="[20, 20]"
-               font="font:MediumSystemFont" />
+               font="font:MediumSystemFont"
+               color="0xFFFFFFFF" />
 
         <Label id="currentIndex"
                width="1920"
                translation="[-20, 20]"
                horizAlign="right"
-               font="font:MediumSystemFont" />
+               font="font:MediumSystemFont"
+               color="0xFFFFFFFF" />
     </children>
 
     <script uri="pkg:/components/set/quizlet-set.brs" />
