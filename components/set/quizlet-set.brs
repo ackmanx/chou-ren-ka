@@ -44,7 +44,9 @@ sub previousTerm()
 
     m.card.text = m.json.terms[m.currentIndex].term
     m.currentIndexLabel.text = getCurrentIndexLabel()
+
     m.currentSide = "term"
+    m.currentSideLabel.text = m.currentSide
 end sub
 
 sub nextTerm()
@@ -56,7 +58,9 @@ sub nextTerm()
 
     m.card.text = m.json.terms[m.currentIndex].term
     m.currentIndexLabel.text = getCurrentIndexLabel()
+
     m.currentSide = "term"
+    m.currentSideLabel.text = m.currentSide
 end sub
 
 sub flipCard()
